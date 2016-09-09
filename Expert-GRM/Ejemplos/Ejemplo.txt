@@ -1,0 +1,22 @@
+
+OBJETOS                                      //Seccion obligada. Declaracion de objetos.
+  PIN : (Valido, Invalido, Adios) 
+  Z   : Numerico
+  M   : Numerico
+   
+
+BASE                                        //Seccion obligada. Base de conocimiento.
+
+  REGLA "Determinación del PIN"    //opcional  
+  IF (M=0) AND (PIN = Valido) 
+     THEN
+       Z = 0
+
+  REGLA "Determinación del PIN"    //opcional  
+  IF (M=0) AND (PIN = Valido) 
+     THEN
+       Z = 12
+
+
+OBJETIVOS  //Opcional
+    Z

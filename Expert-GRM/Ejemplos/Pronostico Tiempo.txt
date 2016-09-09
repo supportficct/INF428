@@ -1,0 +1,75 @@
+OBJETOS
+  Nubes : (Cumulos, Nimbos, Cirros, Cirro_Cumulos, Cumulo_Nimbos)
+  Presion, Temp : (Baja, Normal, Alta)  
+
+  Lluvia : (Si, No)
+  Tiempo : (Frio, Frio_Lluvioso, Calido, Calido_Lluvioso, Normal, Lluvioso)
+
+BASE
+      //Obtener Temp en base a Presion y Temperatura
+  IF Presion <> Baja AND Nubes = Cirros
+     THEN
+       Temp = Baja
+
+  IF Presion = Baja AND Nubes <> Cirros
+     THEN
+       Temp = Normal
+
+  IF Nubes = Cumulos
+     THEN
+       Temp = Alta
+
+
+      //Obtener los valores del objeto lluvia en base a NUBES y PRESION
+  IF (Nubes = Nimbos) AND Presion <> Alta
+     THEN
+       Lluvia = Si
+
+  IF Nubes = Nimbos AND Presion = Alta
+     THEN
+       Lluvia = No
+
+  IF Nubes = Cumulo_Nimbos AND Presion = Baja
+     THEN
+       Lluvia = Si  
+   
+  IF Nubes = Cumulo_Nimbos AND Presion <> Baja
+     THEN
+       Lluvia = No  
+
+  IF Nubes = Cirros
+     THEN
+       Lluvia = No 
+  
+
+     //Obtener el objetivo con Temp y Lluvia
+  IF Temp = Baja AND Lluvia = Si
+     THEN
+       Tiempo = Frio_Lluvioso
+
+  IF Temp = Baja AND Lluvia <> Si
+     THEN
+       Tiempo = Frio
+
+
+  IF Temp = Alta AND Lluvia = Si
+     THEN
+       Tiempo = Calido_Lluvioso
+
+  IF Temp = Alta AND Lluvia = No
+     THEN
+       Tiempo = Calido
+
+
+  
+  IF Temp = Normal AND Lluvia = Si
+     THEN
+       Tiempo = Lluvioso
+
+  IF Temp = Normal AND Lluvia = no
+     THEN
+       Tiempo = Normal
+
+
+OBJETIVOS
+  Tiempo  

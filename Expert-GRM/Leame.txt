@@ -1,0 +1,18 @@
+_________________________________________________________________
+  COPIE EL CONTENIDO DE ESTE CD A UNA CARPETA DE SU PREFERENCIA
+  SI DESEA DISFRUTAR DE LOS SISTEMAS EXPERTOS BASADOS EN REGLAS.
+-----------------------------------------------------------------
+
+
+Para crear Sistemas Expertos, use el programa ExpertGRM.EXE.
+Este programa le permitira escribir la Base de Conocimientos en modo texto,
+como si este fuese un programa. Cuando se compila el programa, el mismo 
+se guarda con la extension .BC.
+
+Para ejecutar el archivo .BC, debe tener presente el archivo RunnerGRM.EXE en
+la misma carpeta conde se aloja ExpertGRM.EXE.
+
+Si desea ejecutar los archivos .BC sin necesidad de usar ExpertGRM, por favor,
+asocie estos archivos a RunnerGRM.EXE, cuando Windows le pida que 
+"Seleccione el programa de una lista".
+
